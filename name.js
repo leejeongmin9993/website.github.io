@@ -130,16 +130,8 @@ function makeTeamProc(){
     })
 
     //console.log(pulHtml);             
-    /*
-     * bg-pink-300
-       bg-purple-300
-       bg-indigo-100
-       bg-green-300          
-       bg-yellow-300
-       bg-red-300
-       bg-orange-300
-       bg-gray-300
-       bg-blue-300
+    /*  
+        test link  => https://leejeongmin9993.github.io/website.github.io/
     */
     document.querySelector("#viewer").innerHTML = pulHtml;
 
