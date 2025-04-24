@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="EUC-KR">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="fc6be1640e97b627.css" />
     <title>Make Random Team </title>
     <style>
@@ -16,34 +16,34 @@
   <body>
 
     <div class="prose max-w-none pt-10 pb-8 dark:prose-dark">
-      <div class="container mx-auto space-y-6 p-4"><h1 class="mb-6 text-center text-3xl font-bold">ÆÀ Â¥º¼±î</h1>
+      <div class="container mx-auto space-y-6 p-4"><h1 class="mb-6 text-center text-3xl font-bold">íŒ€ ì§œë³¼ê¹Œ</h1>
       <br />    
       <div class="space-y-2">
-        <label for="studentInput" class="mb-1 block text-sm font-medium text-gray-700"> ¡Ú º¼¸°ÀÌ ÀÌ¸§ (ÄÞ¸¶ ¶Ç´Â °³ÇàÀ¸·Î ±¸ºÐ)</label>      
+        <label for="studentInput" class="mb-1 block text-sm font-medium text-gray-700">â˜… ë³¼ë¦°ì´ ì´ë¦„(ì½¤ë§ˆ ë˜ëŠ” ê°œí–‰ë¬¸ìžë¡œ êµ¬ë¶„)</label>      
       
-        <textarea id="studentInput" rows="10" placeholder="µÑ¸®, Èñµ¿ÀÌ, ¸¶ÀÌÄÝ..." class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <textarea id="studentInput" rows="10" placeholder="ë‘˜ë¦¬, í¬ë™ì´, ë§ˆì´ì½œ ..." class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
       
-      <div class="space-y-2"><label for="columns" class="mb-1 block text-sm font-medium text-gray-700"> ¡Ù °ÔÀÓ ¼ö</label>        
+      <div class="space-y-2"><label for="columns" class="mb-1 block text-sm font-medium text-gray-700"> â˜† ê²Œìž„ ìˆ˜ ìž…ë ¥</label>        
         <input type="number" id="columns" value="3" min="1" class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
       <br />
-      <button id= "btnMakeTeam" onclick="makeTeamProc()" class="rounded bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600">ÆÀ »ý¼ºÇÏ±â</button>
+      <button id= "btnMakeTeam" onclick="makeTeamProc()" class="rounded bg-blue-500 px-4 py-2 text-white transition-colors hover:bg-blue-600">íŒ€ ìƒì„±í•˜ê¸°</button>
                   
       <div id="resultView" class="space-y-6">        
         <div id="viewer" class="rounded-lg bg-gray-100 p-4">
          <!--
-         <div class="mb-4 text-center text-xl font-bold text-gray-700">1Á¶</div>
+         <div class="mb-4 text-center text-xl font-bold text-gray-700">1ï¿½ï¿½</div>
          <div class="flex flex-wrap justify-center gap-4">
               <div class="flex flex-col items-center justify-center rounded-md border p-4 bg-white cursor-pointer shadow-md transition-all duration-200 hover:shadow-lg" role="button" tabindex="0">
                 <div class="text-center">
-                  <div class="text-lg font-bold">È«±æµ¿</div>
+                  <div class="text-lg font-bold">È«ï¿½æµ¿</div>
                   <div class="text-sm text-gray-500">1</div>
                 </div>
              </div> 
              <div class="flex flex-col items-center justify-center rounded-md border p-4 bg-white cursor-pointer shadow-md transition-all duration-200 hover:shadow-lg" role="button" tabindex="0">
               <div class="text-center">
-                <div class="text-lg font-bold">È«±æµ¿</div>
+                <div class="text-lg font-bold">È«ï¿½æµ¿</div>
                 <div class="text-sm text-gray-500">2</div>
               </div>
            </div>                      
