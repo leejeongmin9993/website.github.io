@@ -1,16 +1,12 @@
-/* 
-´ÙÀ½Àº ¿©·¯ »ç¿ëÀÚ ÀÌ¸§À» ÀÔ·Â¹Ş°í, ÀÌ¸§ÀÇ °³¼ö¸¸Å­ ·£´ıÀ¸·Î °ªÀ» ¹èÁ¤ÇÏ´Â ÀÚ¹Ù½ºÅ©¸³Æ® ÄÚµåÀÔ´Ï´Ù:
-*/
 
 var getArrData = new Array();
 const rmap = new Map();
 function assignRandomValues(userNames , playCnt) {
     if (!Array.isArray(userNames) || userNames.length === 0) {
-        console.error("À¯È¿ÇÑ »ç¿ëÀÚ ÀÌ¸§ ¹è¿­À» ÀÔ·ÂÇØÁÖ¼¼¿ä!");
+        console.error("ì‚¬ìš©ì ì´ë¦„ë¥¼ í™•ì¸í•´ì£¼ì„¸ìš”.");
         return [];
     }
-
-    // ÀÌ¸§¸¶´Ù ·£´ı °ªÀ» »ı¼º ¹× ¹èÁ¤
+    
     for(let i=0; i < playCnt; i++){
 
         getArrData = new Array();
@@ -91,14 +87,13 @@ function makeTeamProc(){
     }   
 
     
-   // const userNames = ["Á¤¹Î", "ÀºÁö", "¼öÇõ", "¹ÎÁØ"];
+   // const userNames = ["í¬ë™ì´", "ë§ˆì´ì½œ"];
    
 
     const playCnt = document.getElementById('columns').value;
     const assignedRandomValues = assignRandomValues(arrPlayer, playCnt);
-
-    // °á°ú Ãâ·Â
-    console.log("¹èÁ¤µÈ ·£´ı °ª:", assignedRandomValues);
+    
+    console.log("ì €ì¥ëœ ë°°ì—´:", assignedRandomValues);
 
     
     let pulHtml = "";
@@ -107,7 +102,7 @@ function makeTeamProc(){
     assignedRandomValues.forEach(function(key,value){
        
         
-        let htmlVal = '<div class="mb-4 text-center text-xl font-bold text-gray-700">'+ value +"Á¶" +'</div>'
+        let htmlVal = '<div class="mb-4 text-center text-xl font-bold text-gray-700">'+ value +" ì¡°" +'</div>'
         + '<div class="flex flex-wrap justify-center gap-4">';
        
         
@@ -149,7 +144,7 @@ function makeTeamProc(){
 
 
 }
-// ¿¹½Ã »ç¿ë
+
 
 
 
