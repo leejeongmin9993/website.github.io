@@ -84,6 +84,10 @@ function makeTeamProc(){
         let repText = textareaValue.replaceAll("\n", ",")
         arrPlayer = repText.split(',');
         console.log(arrPlayer);
+        if(arrPlayer.length <= 1){
+            arrPlayer = repText.split('.');     
+            console.log(arrPlayer);
+        }            
     }   
 
     
