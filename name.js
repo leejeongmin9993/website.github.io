@@ -135,12 +135,92 @@ function makeTeamProc(){
     */
     document.querySelector("#viewer").innerHTML = pulHtml;
 
-    
-    
-
 
 }
 
+
+
+
+let arrNumber = 
+//1150 ~ 1170
+[ 
+
+ "7","13","18","36","39","45","19"
+,"3","9","27","28","38","39","7"
+,"21","25","27","32","37","38","20"
+,"5","7","12","20","25","26","28"
+,"30","31","34","39","41","45","7"
+,"10","16","19","27","37","38","13"
+,"4","8","22","26","32","38","27"
+,"1","9","10","13","35","44","5"
+,"30","31","32","35","36","37","5"
+,"2","3","9","15","27","29","8"
+,"8","9","18","35","39","45","25"       
+,"3","13","28","34","38","42","25"
+,"5","12","24","26","39","42","20"
+,"9","21","24","30","33","37","29"
+,"8","23","31","35","39","40","24"
+,"14","23","25","27","29","42","16"
+,"6","7","27","29","38","45","17"
+,"17","18","23","25","38","39","22"
+,"2","13","15","16","33","43","4"
+,"20","21","22","25","28","29","6"
+,"2","12","20","24","34","42","37"
+,"7","13","18","36","39","45","19"
+];
+
+
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+
+
+function getRandomElement(arr) {
+    if (arr.length === 0) {
+        throw new Error("배열을 확인해주세요.");
+    }
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
+
+function sortArray(arr) {
+    return arr.slice().sort((a, b) => a - b);
+}
+
+function getMakeLotto() {
+    let cnt = document.getElementById('columns').value;
+    document.getElementById('studentInput').value = "";
+    for(let i = 1 ; i <= cnt; i++){
+        getNum();
+    }
+}    
+function getNum() {    
+
+    let getNumbers = new Array();
+    for(let i = 1 ; i <= 6; i++){
+        getNumbers.push(getRandomElement(arrNumber));    
+    }
+
+    for(let i = 1 ; i <= 6; i++){
+        getNumbers = removeDuplicates(getNumbers);
+    }    
+
+    while (getNumbers.length < (6)) {    
+        getNumbers.push(getRandomElement(arrNumber));
+        getNumbers = removeDuplicates(getNumbers);
+    }    
+
+    getNumbers= sortArray(getNumbers);  
+    
+    let txt = "";
+    getNumbers.forEach(function(val){
+        txt = txt + val + " ";
+    });
+
+    console.log(txt);
+    //
+    document.getElementById('studentInput').value =  document.getElementById('studentInput').value + txt + "\n\n";
+}
 
 
 
