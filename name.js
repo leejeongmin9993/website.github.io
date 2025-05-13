@@ -159,12 +159,13 @@ let arrNumber =
 ,"8","9","18","35","39","45","25"       
 ,"3","13","28","34","38","42","25"
 ,"5","12","24","26","39","42","20"
-*/
+
 ,"9","21","24","30","33","37","29"
 ,"8","23","31","35","39","40","24"
 ,"14","23","25","27","29","42","16"
 ,"6","7","27","29","38","45","17"
-,"17","18","23","25","38","39","22"
+*/
+"17","18","23","25","38","39","22"
 ,"2","13","15","16","33","43","4"
 ,"20","21","22","25","28","29","6"
 ,"2","12","20","24","34","42","37"
@@ -190,6 +191,11 @@ function sortArray(arr) {
     return arr.slice().sort((a, b) => a - b);
 }
 
+function removeUndefined(arr) {
+    return arr.filter(item => item !== undefined);
+}
+
+
 function getMakeLotto() {
     let cnt = document.getElementById('columns').value;
     document.getElementById('studentInput').value = "";
@@ -204,13 +210,18 @@ function getNum() {
         getNumbers.push(getRandomElement(arrNumber));    
     }
 
+    getNumbers = removeUndefined(getNumbers);
+
     for(let i = 1 ; i <= 6; i++){
         getNumbers = removeDuplicates(getNumbers);
+        
     }    
 
     while (getNumbers.length < (6)) {    
         getNumbers.push(getRandomElement(arrNumber));
+        getNumbers = removeUndefined(getNumbers);
         getNumbers = removeDuplicates(getNumbers);
+        
     }    
 
     getNumbers= sortArray(getNumbers);  
